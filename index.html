@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake & Ladder</title>
+    <link rel="stylesheet" href="style-mobile.css" id="style" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&amp;family=Montserrat:wght@100&amp;family=Pacifico&amp;family=Poppins:ital,wght@1,600&amp;family=Roboto:ital,wght@0,400;1,500&amp;family=Sacramento&amp;family=Tourney:wght@100&amp;family=Ubuntu:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Monoton&family=Montserrat:wght@100&family=Pacifico&family=Poppins:ital,wght@1,600&family=Rampart+One&family=Roboto:ital,wght@0,400;1,500&family=Sacramento&family=Tourney:wght@100&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Monoton&family=Montserrat:wght@100&family=Pacifico&family=Poppins:ital,wght@1,600&family=Rampart+One&family=Righteous&family=Roboto:ital,wght@0,400;1,500&family=Sacramento&family=Tourney:wght@100&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="s.ico" type="image/x-icon">
+  </head>
+  <!--
+    ind
+    getnames
+    game-container
+    leaderboard
+-->
+  <h1 id="nav">SNAKE AND LADDER</h1>
+  <body>
+    <div id="ind">
+      <h3>Choose Number of Players</h3>
+      <button id="btn1">2</button>
+      <button id="btn2">3</button>
+      <button id="btn3">4</button>
+    </div>
+
+    <div id="getnames">
+      <div id="name1" class="name">
+        <input
+          type="text"
+          placeholder="Enter player1 name"
+          value="player1"
+          id="n11"
+        />
+        <input
+          type="text"
+          placeholder="Enter player2 name"
+          value="player2"
+          id="n12"
+        />
+        <button id="play1">PLAY</button>
+      </div>
+      <div id="name2" class="name">
+        <input
+          type="text"
+          placeholder="Enter player1 name"
+          value="player1"
+          id="n21"
+        />
+        <input
+          type="text"
+          placeholder="Enter player2 name"
+          value="player2"
+          id="n22"
+        />
+        <input
+          type="text"
+          placeholder="Enter player3 name"
+          value="player3"
+          id="n23"
+        />
+        <button id="play2">PLAY</button>
+      </div>
+      <div id="name3" class="name">
+        <input
+          type="text"
+          placeholder="Enter player1 name"
+          value="player1"
+          id="n31"
+        />
+        <input
+          type="text"
+          placeholder="Enter player2 name"
+          value="player2"
+          id="n32"
+        />
+        <input
+          type="text"
+          placeholder="Enter player3 name"
+          value="player3"
+          id="n33"
+        />
+        <input
+          type="text"
+          placeholder="Enter player4 name"
+          value="player4"
+          id="n34"
+        />
+        <button id="play3">PLAY</button>
+      </div>
+    </div>
+
+    <div id="game-container">
+      <div id="board">
+        <img src="snake1.png" alt="" id="snake1" class="snake" />
+        <img src="snake2.png" alt="" id="snake2" class="snake" />
+        <img src="snake3.png" alt="" id="snake3" class="snake" />
+        <img src="snake4.png" alt="" id="snake4" class="snake" />
+        <img src="snake1.png" alt="" id="snake5" class="snake" />
+        <img src="snake2.png" alt="" id="snake6" class="snake" />
+        <img src="snake3.png" alt="" id="snake7" class="snake" />
+        <img src="ladder.png" alt="" id="ladder1" />
+        <img src="ladder.png" alt="" id="ladder2" />
+        <img src="ladder.png" alt="" id="ladder3" />
+        <img src="ladder.png" alt="" id="ladder4" />
+        <img src="ladder.png" alt="" id="ladder5" />
+        <img src="ladder.png" alt="" id="ladder6" />
+        <img src="ladder.png" alt="" id="ladder7" />
+      </div>
+      <div id="dice">
+        <img src="dice1.jpeg" alt="" class="diceimg" id="image" />
+      </div>
+      <button id="roll">ROLL</button>
+      <div id="info"></div>
+      <button id="reset">RESET</button>
+    </div>
+
+    <div id="leaderboard">
+      <h2 id="w1"></h2>
+      <h2 id="w2"></h2>
+      <h2 id="w3"></h2>
+      <button id="reset2">RESET</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
