@@ -92,7 +92,6 @@ for(let i=1;i<=10;i++){
     else box.style.backgroundColor="white";
     board.appendChild(box);
 }
-//-------------------------------------------------------------------------------------------------------
 var player=[0,0,-1,-1];
 var i=0;
 let diceroll=new Audio('diceroll.mp3');
@@ -176,8 +175,6 @@ play3.onclick=()=>{
     container=document.getElementById('game-container');
     container.style.display='flex';
 }
-//-----------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------------
 function check_presence(oldpos,p){
     let x=-1;
      for(let i=0;i<4;i++){
@@ -187,7 +184,6 @@ function check_presence(oldpos,p){
     }
     return x;
     }
-//----------------------------------------------------------------------------------------------
 function updatecolor(oldpos,newpos,p,delay=0){
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
@@ -209,7 +205,6 @@ function updatecolor(oldpos,newpos,p,delay=0){
         },delay);
     })
 }
-//----------------------------------------------------------------------------------------------------
 function rolling_function(){
     return new Promise((resolve, reject) => {
         number=Math.floor(Math.random()*6)+1;
@@ -227,14 +222,12 @@ function rolling_function(){
         },1000)  
     })
 }
-//------------------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------------------
 function hide_roLL(){
     return new Promise((resolve, reject) => {
         roll.hidden=true;
         resolve();   
     })
-}//------------------------------------------------------------------------------------------
+}
 function ladder_help(poi,pl){
     return new Promise((resolve, reject) => {
         if(poi==80){
@@ -289,7 +282,6 @@ function ladder_help(poi,pl){
         resolve();
     })
 }
-//----------------------------------------------------------------------------------------
 function snake_bite(poi,pl){
     return new Promise((resolve, reject) => {
         if(poi==48){
@@ -344,16 +336,13 @@ function snake_bite(poi,pl){
         resolve();
     })
 }
-//------------------------------------------------------------------------------------------------
 function show_roll(){
     return new Promise((resolve, reject) => { 
         roll.hidden=false;
         resolve();
     })
 }
-//-----------------------------------------------------------------------------------------------
-
-    function move(){
+function move(){
     return new Promise(async(resolve, reject) => {
         if(number==1 && player[i]==0){
             pop.load();
@@ -423,7 +412,6 @@ function leader(){
            resolve();
         })
     }
-//----------------------------------------------------------------------------------------
 function change_turn(){
     return new Promise((resolve, reject) => {
         if(ct){
@@ -431,29 +419,23 @@ function change_turn(){
             i%=total_number;
             while(player[i]==-2){
                 i=i+1;
-                
                 i%=total_number;
              }
              i%=total_number;
-             //-2 0 23 23
-    
             info.innerHTML=`Turn for ${names[i]}`;
          }
          roll.hidden=false;
          resolve();
     })
 }
-//-----------------------------------------------------------------------------------------------
 async function full_game(){
     await hide_roLL();
     await rolling_function();
     await move();
     await checkwinner();
-    await checkgameover().catch((err)=>{
-        console.log('GAME OVER');
-    });
-     await ladder_help(player[i],i);
-     await snake_bite(player[i],i);
+    await checkgameover().catch((err)=>{});
+    await ladder_help(player[i],i);
+    await snake_bite(player[i],i);
     await change_turn()
     await show_roll();
 }
