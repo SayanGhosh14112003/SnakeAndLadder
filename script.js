@@ -356,6 +356,7 @@ function show_roll(){
     function move(){
     return new Promise(async(resolve, reject) => {
         if(number==1 && player[i]==0){
+            pop.load();
             pop.play();
             player[i]=1;
             await updatecolor(0,1,i,500);
